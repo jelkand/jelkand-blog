@@ -1,21 +1,44 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql, PageProps } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { rhythm, scale } from '../utils/typography'
+import { BlogPostBySlugQuery } from '../../graphql-types'
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+interface BlogPostPageContext {
+  slug: string
+  previous?: ContextSubPage
+  next?: ContextSubPage
+}
+
+interface ContextSubPage {
+  fields: {
+    slug: string
+  }
+  frontmatter: {
+    title: string
+  }
+}
+
+const BlogPostTemplate: React.FC<PageProps<
+  BlogPostBySlugQuery,
+  BlogPostPageContext
+>> = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data?.site?.siteMetadata?.title
   const { previous, next } = pageContext
+
+  console.log(pageContext.previous)
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={post?.frontmatter?.title ?? undefined}
+        description={
+          post?.frontmatter?.description ?? post?.excerpt ?? undefined
+        }
       />
       <article>
         <header>
@@ -25,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {post?.frontmatter?.title}
           </h1>
           <p
             style={{
@@ -34,10 +57,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {post?.frontmatter?.date}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section dangerouslySetInnerHTML={{ __html: post?.html ?? '' }} />
         <hr
           style={{
             marginBottom: rhythm(1),

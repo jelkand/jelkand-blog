@@ -1,9 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+import { WindowLocation } from '@reach/router'
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm, scale } from '../utils/typography'
+import { Maybe } from '../../graphql-types'
 
-const Layout = ({ location, title, children }) => {
+interface LayoutProps {
+  title?: Maybe<string>
+  location: WindowLocation<WindowLocation['state']>
+  children: React.ReactNode
+}
+
+const Layout: React.FC<LayoutProps> = ({ location, title = '', children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
