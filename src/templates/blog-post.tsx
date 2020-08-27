@@ -1,11 +1,14 @@
+/** @jsx jsx */
+import { jsx, Styled } from 'theme-ui'
 import React from 'react'
 import { Link, graphql, PageProps } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
 import { BlogPostBySlugQuery } from '../../graphql-types'
+import theme from '../gatsby-plugin-theme-ui'
 
 interface BlogPostPageContext {
   slug: string
@@ -26,11 +29,9 @@ const BlogPostTemplate: React.FC<PageProps<
   BlogPostBySlugQuery,
   BlogPostPageContext
 >> = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
+  const post = data.mdx
   const siteTitle = data?.site?.siteMetadata?.title
   const { previous, next } = pageContext
-
-  console.log(pageContext.previous)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -43,27 +44,29 @@ const BlogPostTemplate: React.FC<PageProps<
       <article>
         <header>
           <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
+            sx={{
+              ...theme.styles.h1,
+              mt: 3,
+              mb: 0,
             }}
           >
             {post?.frontmatter?.title}
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
+          <Styled.p
+            sx={{
+              display: 'block',
+              mb: 3,
             }}
           >
             {post?.frontmatter?.date}
-          </p>
+          </Styled.p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post?.html ?? '' }} />
+        {/* <ThemeProvider theme={theme}> */}
+        <MDXRenderer>{post?.body ?? ''}</MDXRenderer>
+        {/* </ThemeProvider> */}
         <hr
-          style={{
-            marginBottom: rhythm(1),
+          sx={{
+            mb: 3,
           }}
         />
         <footer>
@@ -73,13 +76,13 @@ const BlogPostTemplate: React.FC<PageProps<
 
       <nav>
         <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
+        // sx={{
+        //   display: 'flex',
+        //   flexWrap: 'flex',
+        //   justifyContent: 'space-between',
+        //   listStyle: 'none',
+        //   padding: 0,
+        // }}
         >
           <li>
             {previous && (
@@ -110,10 +113,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

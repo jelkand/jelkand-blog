@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog`,
+    title: `Jack's Blog`,
     author: {
       name: `Jack Anderson`,
       summary: `Senior Software Engineer. Utah native, living near Greensboro, NC.`,
@@ -24,25 +24,26 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+        gatsbyRemarkPlugins: [
+          // {
+          //   resolve: `gatsby-remark-images`,
+          //   options: {
+          //     maxWidth: 590,
+          //   },
+          // },
+          // {
+          //   resolve: `gatsby-remark-responsive-iframe`,
+          //   options: {
+          //     wrapperStyle: `margin-bottom: 1.0725rem`,
+          //   },
+          // },
+          // `gatsby-remark-prismjs`,
+          // `gatsby-remark-copy-linked-files`,
+          // `gatsby-remark-smartypants`,
         ],
+        defaultLayouts: `${__dirname}/src/templates/blog-post.tsx`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -67,12 +68,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    'gatsby-plugin-theme-ui',
+    // 'gatsby-plugin-mdx',
     `gatsby-plugin-graphql-codegen`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
