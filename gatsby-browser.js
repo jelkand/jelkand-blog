@@ -1,5 +1,3 @@
 // custom typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
-
+import 'typeface-poppins'
 import 'prismjs/themes/prism.css'

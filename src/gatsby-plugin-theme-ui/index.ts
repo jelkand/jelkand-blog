@@ -1,39 +1,27 @@
-// lifted wholesale from the 'future' preset
 export default {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512, 680],
   fonts: {
-    body: '"Avenir Next", system-ui, sans-serif',
-    heading: 'inherit',
+    body: 'Poppins, sans-serif',
+    heading: 'Poppins, sans-serif',
     monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
-    heading: 600,
+    heading: 900,
     bold: 700,
   },
   lineHeights: {
-    body: 1.75,
+    body: 1.625,
     heading: 1.25,
   },
   colors: {
     text: '#000',
     background: '#fff',
-    primary: '#11e',
-    secondary: '#c0c',
-    highlight: '#e0e',
-    muted: '#f6f6ff',
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0fc',
-        secondary: '#0cf',
-        highlight: '#f0c',
-        muted: '#011',
-      },
-    },
+    primary: '#609',
+    secondary: '#306',
+    muted: '#f6f6f6',
   },
   styles: {
     root: {

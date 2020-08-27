@@ -8,7 +8,6 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { BlogPostBySlugQuery } from '../../graphql-types'
-import theme from '../gatsby-plugin-theme-ui'
 
 interface BlogPostPageContext {
   slug: string
@@ -43,15 +42,14 @@ const BlogPostTemplate: React.FC<PageProps<
       />
       <article>
         <header>
-          <h1
+          <Styled.h1
             sx={{
-              ...theme.styles.h1,
               mt: 3,
               mb: 0,
             }}
           >
             {post?.frontmatter?.title}
-          </h1>
+          </Styled.h1>
           <Styled.p
             sx={{
               display: 'block',
@@ -61,9 +59,7 @@ const BlogPostTemplate: React.FC<PageProps<
             {post?.frontmatter?.date}
           </Styled.p>
         </header>
-        {/* <ThemeProvider theme={theme}> */}
         <MDXRenderer>{post?.body ?? ''}</MDXRenderer>
-        {/* </ThemeProvider> */}
         <hr
           sx={{
             mb: 3,
@@ -76,13 +72,13 @@ const BlogPostTemplate: React.FC<PageProps<
 
       <nav>
         <ul
-        // sx={{
-        //   display: 'flex',
-        //   flexWrap: 'flex',
-        //   justifyContent: 'space-between',
-        //   listStyle: 'none',
-        //   padding: 0,
-        // }}
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
+            padding: 0,
+          }}
         >
           <li>
             {previous && (
