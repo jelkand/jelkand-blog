@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Jack's Blog`,
+    title: `Jack Anderson`,
     author: {
       name: `Jack Anderson`,
-      summary: `Senior Software Engineer. Utah native, living near Greensboro, NC.`,
+      summary: `Software Engineer in the fintech space. Utah native, living in North Carolina. Want to chat? blog@jackanderson.dev`,
     },
     description: `A personal blog about technology and hobbies.`,
     siteUrl: `https://blog.jackanderson.dev`,
@@ -27,33 +27,32 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-          // {
-          //   resolve: `gatsby-remark-images`,
-          //   options: {
-          //     maxWidth: 590,
-          //   },
-          // },
-          // {
-          //   resolve: `gatsby-remark-responsive-iframe`,
-          //   options: {
-          //     wrapperStyle: `margin-bottom: 1.0725rem`,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
           // `gatsby-remark-prismjs`,
-          // `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-copy-linked-files`,
           // `gatsby-remark-smartypants`,
         ],
-        defaultLayouts: `${__dirname}/src/templates/blog-post.tsx`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -69,7 +68,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-theme-ui',
-    // 'gatsby-plugin-mdx',
     `gatsby-plugin-graphql-codegen`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

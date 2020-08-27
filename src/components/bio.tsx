@@ -39,7 +39,7 @@ const Bio: React.FC = () => {
       }}
     >
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
+        Written by <strong>{author.name}</strong>. {author.summary}
       </p>
     </div>
   )

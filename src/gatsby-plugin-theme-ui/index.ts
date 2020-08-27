@@ -24,6 +24,16 @@ export default {
     muted: '#f6f6f6',
   },
   styles: {
+    li: {
+      code: {
+        fontFamily: 'monospace',
+        fontSize: 'inherit',
+      },
+    },
+    code: {
+      fontFamily: 'monospace',
+      fontSize: 'inherit',
+    },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
@@ -76,6 +86,10 @@ export default {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
+      code: {
+        fontFamily: 'monospace',
+        fontSize: 'inherit',
+      },
     },
     a: {
       color: 'primary',
@@ -87,10 +101,7 @@ export default {
         color: 'inherit',
       },
     },
-    code: {
-      fontFamily: 'monospace',
-      fontSize: 'inherit',
-    },
+
     table: {
       width: '100%',
       borderCollapse: 'separate',
