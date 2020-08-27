@@ -2,7 +2,7 @@
 import { jsx } from 'theme-ui'
 import React from 'react'
 import { Link } from 'gatsby'
-import { WindowLocation } from '@reach/-js/react'
+import { WindowLocation } from '@reach/router'
 
 import { Maybe } from '../../graphql-types'
 
