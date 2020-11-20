@@ -7,7 +7,12 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { BlogPostBySlugQuery } from '../../graphql-types'
+// import { BlogPostBySlugQuery } from '../../graphql-types'
+import { CodeBlock } from '../components/codeBlock'
+
+const components = {
+  code: CodeBlock,
+};
 
 interface BlogPostPageContext {
   slug: string
@@ -25,7 +30,7 @@ interface ContextSubPage {
 }
 
 const BlogPostTemplate: React.FC<PageProps<
-  BlogPostBySlugQuery,
+  any,
   BlogPostPageContext
 >> = ({ data, pageContext, location }) => {
   const post = data.mdx
@@ -59,7 +64,7 @@ const BlogPostTemplate: React.FC<PageProps<
             {post?.frontmatter?.date}
           </Styled.p>
         </header>
-        <MDXRenderer>{post?.body ?? ''}</MDXRenderer>
+        <MDXRenderer components={components}>{post?.body ?? ''}</MDXRenderer>
         <hr
           sx={{
             mb: 3,
