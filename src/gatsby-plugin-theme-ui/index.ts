@@ -24,16 +24,16 @@ export default {
     muted: '#f6f6f6',
   },
   styles: {
-    li: {
-      code: {
-        fontFamily: 'monospace',
-        fontSize: 'inherit',
-      },
-    },
-    code: {
-      fontFamily: 'monospace',
-      fontSize: 'inherit',
-    },
+    // li: {
+    //   // code: {
+    //   //   fontFamily: 'monospace',
+    //   //   fontSize: 'inherit',
+    //   // },
+    // },
+    // code: {
+    //   fontFamily: 'monospace',
+    //   fontSize: 'inherit',
+    // },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',

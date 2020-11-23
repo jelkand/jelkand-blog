@@ -23,14 +23,14 @@ but this is my blog so I'll briefly run through the commands.
 
 The `buildx` command is the core of this functionality.
 
-```
+```bash
 docker buildx create --name pibuilder
 
 docker buildx use pibuilder
 
 docker buildx inspect --bootstrap
 
-// similar syntax to the build command, with the platform flag available
+# similar syntax to the build command, with the platform flag available
 docker buildx build --platform linux/arm/v7 -t jelkand/baas:latest --push .
 ```
 
@@ -50,7 +50,7 @@ The actions are largely self documenting, but I'll offer some brief commentary.
 3. Of course you can skip the `echo` statements, but I found them informative and left them.
 4. Note that Docker authenticates with a revokable token. I'm happy about that.
 
-```publish.yml
+```yaml
 name: Publish BaaS Image
 
 on:

@@ -17,7 +17,7 @@ I've been working on an autoscaling demo for a minute. To do this, I've put toge
 BaaS (or Bogosort as a service) is designed to be incredibly inefficient. Even a relatively simple request should pin the CPU and hit any limits we've established.
 The definition of the deployment is as such:
 
-```
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -70,7 +70,7 @@ Let's add a horizontal pod autoscaler to the definition.
 
 We'll scale up to a maximum of 5 replicas, and scale up when we hit 80 percent CPU utilization.
 
-```
+```yaml
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
@@ -88,7 +88,7 @@ spec:
 
 Applying this shows us:
 
-```
+```bash
 horizontalpodautoscaler.autoscaling/baas created
 ```
 

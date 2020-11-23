@@ -75,7 +75,7 @@ in code requires a dizzying array of short-circuits, safe navigation operators, 
 Another substantial pain point was getting `theme-ui` to apply its styles to rendered MDX content. This is a feature it promises, and it's documented as fairly trivial.
 Ultimately this had to do with a dependency mismatch, resolved by switching to `yarn` and using a resolutions field as such:
 
-```
+```json
   "resolutions": {
     "@mdx-js/react": "1.6.16"
   },
