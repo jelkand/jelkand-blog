@@ -45,12 +45,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-segment-js`,
+    //   options: {
+    //     prodKey: 'v1UevCvgKilBHnZDxwZ1rN4tmL5ddBHU',
+    //     devKey: 'v1UevCvgKilBHnZDxwZ1rN4tmL5ddBHU',
+    //     trackPage: true,
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-segment-js`,
+      resolve: `gatsby-plugin-panelbear`,
       options: {
-        prodKey: 'v1UevCvgKilBHnZDxwZ1rN4tmL5ddBHU',
-        devKey: 'v1UevCvgKilBHnZDxwZ1rN4tmL5ddBHU',
-        trackPage: true,
+        siteID: 'EjWw2y2d5PY',
       },
     },
     // {
