@@ -7279,10 +7279,10 @@ gatsby-plugin-page-creator@^2.3.24:
     lodash "^4.17.15"
     slugify "^1.4.4"
 
-gatsby-plugin-panelbear@^0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-panelbear/-/gatsby-plugin-panelbear-0.1.1.tgz#ec3a13e394e8d3274e97347d2f5da1ae01ea6506"
-  integrity sha512-Go7EIaFJFsgXeZocPhaanIjOAofzuNXYfU6Ws+RRXWDwVaMwLWpv98wrnOgipZKbfInntKon3f6DmZwpQcUCaQ==
+gatsby-plugin-panelbear@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-panelbear/-/gatsby-plugin-panelbear-0.1.2.tgz#be1a6e190d003dd0f36d7d53fa629bb813baa8f0"
+  integrity sha512-lHqFMYi8ZmA2L8m7DfZv2jZX4cbvwvQKHN8KvpgGTsj/PuoONS1WujVnAe3ZUbF2Kz64/LplCE/4Ni3FPMYaQA==
   dependencies:
     react "^17.0.1"
 
