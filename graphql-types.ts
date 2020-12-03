@@ -696,9 +696,9 @@ export type FileFieldsEnum =
   | 'childMdx___fileAbsolutePath'
   | 'childMdx___frontmatter___title'
   | 'childMdx___frontmatter___date'
+  | 'childMdx___frontmatter___category'
   | 'childMdx___frontmatter___description'
   | 'childMdx___frontmatter___tags'
-  | 'childMdx___frontmatter___category'
   | 'childMdx___slug'
   | 'childMdx___body'
   | 'childMdx___excerpt'
@@ -1440,9 +1440,9 @@ export type MdxFieldsEnum =
   | 'fileAbsolutePath'
   | 'frontmatter___title'
   | 'frontmatter___date'
+  | 'frontmatter___category'
   | 'frontmatter___description'
   | 'frontmatter___tags'
-  | 'frontmatter___category'
   | 'slug'
   | 'body'
   | 'excerpt'
@@ -1571,9 +1571,9 @@ export type MdxFilterInput = {
 export type MdxFrontmatter = {
   title: Scalars['String'];
   date?: Maybe<Scalars['Date']>;
+  category?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  category?: Maybe<Scalars['String']>;
 };
 
 
@@ -1587,9 +1587,9 @@ export type MdxFrontmatterDateArgs = {
 export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
+  category?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
-  category?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -2513,9 +2513,8 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___version'
   | 'pluginCreator___pluginOptions___path'
   | 'pluginCreator___pluginOptions___name'
-  | 'pluginCreator___pluginOptions___prodKey'
-  | 'pluginCreator___pluginOptions___devKey'
-  | 'pluginCreator___pluginOptions___trackPage'
+  | 'pluginCreator___pluginOptions___siteID'
+  | 'pluginCreator___pluginOptions___debug'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___start_url'
   | 'pluginCreator___pluginOptions___background_color'
@@ -2717,9 +2716,8 @@ export type SitePluginFieldsEnum =
   | 'version'
   | 'pluginOptions___path'
   | 'pluginOptions___name'
-  | 'pluginOptions___prodKey'
-  | 'pluginOptions___devKey'
-  | 'pluginOptions___trackPage'
+  | 'pluginOptions___siteID'
+  | 'pluginOptions___debug'
   | 'pluginOptions___short_name'
   | 'pluginOptions___start_url'
   | 'pluginOptions___background_color'
@@ -2849,9 +2847,8 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 export type SitePluginPluginOptions = {
   path?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
-  prodKey?: Maybe<Scalars['String']>;
-  devKey?: Maybe<Scalars['String']>;
-  trackPage?: Maybe<Scalars['Boolean']>;
+  siteID?: Maybe<Scalars['String']>;
+  debug?: Maybe<Scalars['Boolean']>;
   short_name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
   background_color?: Maybe<Scalars['String']>;
@@ -2869,9 +2866,8 @@ export type SitePluginPluginOptions = {
 export type SitePluginPluginOptionsFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
-  prodKey?: Maybe<StringQueryOperatorInput>;
-  devKey?: Maybe<StringQueryOperatorInput>;
-  trackPage?: Maybe<BooleanQueryOperatorInput>;
+  siteID?: Maybe<StringQueryOperatorInput>;
+  debug?: Maybe<BooleanQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
   background_color?: Maybe<StringQueryOperatorInput>;

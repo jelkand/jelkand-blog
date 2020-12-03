@@ -7174,14 +7174,6 @@ gatsby-plugin-feed@^2.5.11:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
-gatsby-plugin-google-analytics@^2.3.13:
-  version "2.3.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.13.tgz#46f78f4df11cc773d44e5909ea491c8f8c0e6774"
-  integrity sha512-K/6c9iByR8uDpFZuJrappjyMsVtWFwPyAkRlXFHhq2mmNtgZeRVKFf5XoGiOHCeMPEpBGE58LLana/F01LLteQ==
-  dependencies:
-    "@babel/runtime" "^7.10.3"
-    minimatch "3.0.4"
-
 gatsby-plugin-graphql-codegen@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-graphql-codegen/-/gatsby-plugin-graphql-codegen-2.7.1.tgz#60683ef5508bc7e23c8e288f6d320b3f2b7f5d00"
@@ -7279,12 +7271,10 @@ gatsby-plugin-page-creator@^2.3.24:
     lodash "^4.17.15"
     slugify "^1.4.4"
 
-gatsby-plugin-panelbear@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-panelbear/-/gatsby-plugin-panelbear-0.1.2.tgz#be1a6e190d003dd0f36d7d53fa629bb813baa8f0"
-  integrity sha512-lHqFMYi8ZmA2L8m7DfZv2jZX4cbvwvQKHN8KvpgGTsj/PuoONS1WujVnAe3ZUbF2Kz64/LplCE/4Ni3FPMYaQA==
-  dependencies:
-    react "^17.0.1"
+gatsby-plugin-panelbear@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-panelbear/-/gatsby-plugin-panelbear-1.0.0.tgz#aa1764692e2c3c03b7ed80fcf456dc3d3864e0b3"
+  integrity sha512-k/SvxXaAeDs4QdZsU8IZP4RQ8OWKJnvtvEXP4mvre2BQVv7nnahQ1PExOwauAunQ7csB3ae5eykWUC3N9jvFWw==
 
 gatsby-plugin-react-helmet@^3.3.10:
   version "3.3.10"
@@ -7292,11 +7282,6 @@ gatsby-plugin-react-helmet@^3.3.10:
   integrity sha512-AcXYwmS3r298JWs6iQ3OLNxIe8L8i5a2iSdLr/SDMpHqumYm7q/vB9kCX0et5wM7DIuZ7aPXDrdi5yDCAvU5lg==
   dependencies:
     "@babel/runtime" "^7.10.3"
-
-gatsby-plugin-segment-js@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-segment-js/-/gatsby-plugin-segment-js-3.6.0.tgz#740b2a5e6730119147e0dd1fb2c39acca83e353d"
-  integrity sha512-kdpXV5RUGR5dRcSJHsUxP2+FY8XDOAqi3disj0SHdR5mZDAg4QtpiCQZYRB6Ji1/aP87oypoJVyeu6s1+GpHSw==
 
 gatsby-plugin-sharp@^2.6.29:
   version "2.6.29"
@@ -10510,7 +10495,7 @@ minimatch@3.0.3:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimatch@3.0.4, minimatch@^3.0.3, minimatch@^3.0.4:
+minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
@@ -12749,14 +12734,6 @@ react@^16.12.0, react@^16.8.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-
-react@^17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
-  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 read-chunk@^3.2.0:
   version "3.2.0"
@@ -15116,11 +15093,6 @@ typeface-open-sans@^0.0.75:
   version "0.0.75"
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.75.tgz#20d0c330f14c0c40463c334adbedd6005389abe4"
   integrity sha512-0lLmB7pfj113OP4T78SbpSmC4OCdFQ0vUxdSXQccsSb6qF76F92iEuC/DghFgmPswTyidk8+Hwf+PS/htiJoRQ==
-
-typeface-poppins@^0.0.72:
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/typeface-poppins/-/typeface-poppins-0.0.72.tgz#3262d6533dea2e99a5cafb3be7d8fa876e105206"
-  integrity sha512-FgzdU4XfGYc4aTq6WZD9FC+le4Foz6cyzjdjDvVnQePTQSUD0dkrXiVaTK/cyNVXQrEl2ykV39PxeKeFqqkrTA==
 
 typescript@^4.0.2:
   version "4.0.2"
