@@ -45,26 +45,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-segment-js`,
-    //   options: {
-    //     prodKey: 'v1UevCvgKilBHnZDxwZ1rN4tmL5ddBHU',
-    //     devKey: 'v1UevCvgKilBHnZDxwZ1rN4tmL5ddBHU',
-    //     trackPage: true,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-panelbear`,
       options: {
         siteID: 'EjWw2y2d5PY',
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://blog.jackanderson.dev`,
+      },
+    },
     // `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
