@@ -1,9 +1,11 @@
-export default {
+import { Theme } from 'theme-ui'
+
+const camillo: Theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512, 680],
   fonts: {
     body: 'Open Sans, sans-serif',
-    heading: 'Open Sans, sans-serif',
+    heading: 'Barlow, Open Sans, sans-serif',
     monospace: 'Menlo, monospace',
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
@@ -18,11 +20,32 @@ export default {
   },
   colors: {
     text: '#000',
-    background: '#fff',
-    primary: '#609',
-    secondary: '#306',
+    background: '#F4F7FA',
+    primary: '#5C79AC',
+    secondary: '#B9BEC3',
     muted: '#f6f6f6',
   },
+  radii: ['0px'],
+  buttons: {
+    primary: {
+      color: 'background',
+      bg: 'primary',
+      fontFamily: 'body',
+      borderRadius: 0,
+      cursor: 'pointer',
+    },
+    secondary: {
+      color: 'primary',
+      bg: 'secondary',
+      fontFamily: 'heading',
+      fontWeight: 'bold',
+      'text-transform': 'uppercase',
+      borderRadius: 0,
+      cursor: 'pointer',
+    },
+  },
+
+  // below apply only to MDX documents
   styles: {
     // li: {
     //   // code: {
@@ -120,3 +143,5 @@ export default {
     },
   },
 }
+
+export default camillo

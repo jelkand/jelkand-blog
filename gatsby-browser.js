@@ -1,3 +1,4 @@
 // custom typefaces
-import 'typeface-poppins'
+import '@fontsource/barlow'
+import '@fontsource/open-sans'
 import 'prismjs/themes/prism.css'
